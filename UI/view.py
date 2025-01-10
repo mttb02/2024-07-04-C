@@ -1,6 +1,7 @@
 import flet as ft
 
 
+
 class View(ft.UserControl):
     def __init__(self, page: ft.Page):
         super().__init__()
@@ -23,6 +24,8 @@ class View(ft.UserControl):
         self.txt_result1 = None  # Qui scrivere gli outputs del punto 1
         self.txt_result2 = None  # Qui scrivere gli outputs del punto 2
 
+
+
     def load_interface(self):
         # title
         self._title = ft.Text("TdP 2024 - Esame del 04-07-2024 - C", color="blue", size=24)
@@ -34,6 +37,8 @@ class View(ft.UserControl):
 
         self.ddshape = ft.Dropdown(label="Shape",
                                    hint_text="Forma da analizzare per gli avvistamenti.")
+
+        self._controller.load_dd()
 
         self.btn_graph = ft.ElevatedButton(text="Crea Grafo",
                                            tooltip="Crea il grafo del punto 1",
